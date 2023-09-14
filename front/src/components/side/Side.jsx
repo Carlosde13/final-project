@@ -10,7 +10,7 @@ export default function Side({id}) {
   
     useEffect(() => {
       axios
-        .get(`http://127.0.0.1:8000/api/usuarios/${params.id}`)
+        .get(`http://127.0.0.1:8000/api/usuarios/${id}`)
         .then((response) => {
           setUsuario(response.data);
           setCargando(false);

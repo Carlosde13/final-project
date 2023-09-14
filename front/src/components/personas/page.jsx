@@ -30,18 +30,14 @@ export default function Personas() {
       });
   }, []);
 
-  if(usuario){
-    if(usuario.rol_id != 1){
-      window.location.href = `../dashboard/${params.id}`
-    }
-  }
+  
   return (
     <>
       {cargando ? (
         <div className="mt-28 text-xl text-center">Loading...</div>
       ) : (
         <div className="w-full h-screen flex justify-start">
-          <Side></Side>
+          <Side id={params.id}></Side>
           <div className="w-10/12 h-screen bg-[#f5f6fa] parte-blanca-login">
             <h1 className="text-[28px] font-semibold p-[10px]">
               Lista de Personas
